@@ -1,0 +1,2 @@
+Programų pavyzdžius galima kompiliuoti ir taip dosbox terminale:
+yasm  nasmpvz1.asm -fbin -o nasmpvz1.com
