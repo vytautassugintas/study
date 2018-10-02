@@ -59,10 +59,21 @@ const third = () => {
   }
 }
 
+const CSetOfSets = new Set([setOf2, setOf3, null]);
+
+const fourth = () => {
+  const step1 = union(B, D);
+  const step2 = intersection(step1, CSetOfSets);
+  return {
+    step1, step2
+  }
+}
+
 const results = {
   1: first(),
   2: second(),
   3: third(),
+  4: fourth()
 }
 
 console.log(results);
