@@ -1,3 +1,4 @@
+const { union, difference, intersection } = require('./utils');
 // to allow JS to compare set inside set, you can't simply 
 // add new Set([2]) in set, bc new Set([2]) !== new Set([2]);
 const setOf2 = new Set([2]);
@@ -7,18 +8,6 @@ const A = new Set([2, 3, null]);
 const B = new Set([1, 3, 2, setOf2]);
 const C = new Set([2, 3]);
 const D = new Set([2, setOf3, setOf2, null]);
-
-// A ∪ B = { x: x ∈ A || x ∈ B }
-const union = (setA, setB) => 
-  new Set([...setA, ...setB]);
-
-// A ∩ B = { x: y ∈ A && x ∈ B }
-const intersection = (setA, setB) => 
-  new Set([...setA].filter(x => setB.has(x)));
-
-// A \ B = { x: x ∈ A && x ∉ B}
-const difference = (setA, setB) =>
-  new Set([...setA].filter(x => !setB.has(x)));
 
 // (A ∪ B) ∩ D
 const first = () => {
