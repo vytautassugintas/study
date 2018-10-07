@@ -18,7 +18,7 @@ section .text                   ; kodas prasideda cia
 section .data                   ; duomenys
 
    pranesimas:
-      db 'Labas, tai pirmoji programa... ', 0x0D, 0x0A, '$'
+      db 'Hello World', 0x0D, 0x0A, '$'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 section .bss                    ; neinicializuoti duomenys  
